@@ -1,0 +1,26 @@
+### Send a POST request to start a batch job
+POST http://localhost:8080/dmit2015-assignment04-youngjaelee/webapi/batch-jobs/job
+
+### Check the batch job status for id 1
+GET http://localhost:8080/dmit2015-assignment04-youngjaelee/webapi/batch-jobs/1
+
+### Get the EdmontonPropertyAssessment Count
+GET http://localhost:8080/dmit2015-assignment04-youngjaelee/webapi/EdmontonPropertyAssessments/count
+
+### Get the EdmontonPropertyAssessment by longitude -113.35023446875456, latitude 53.47287377003312, distance 50 (Verify it returns 8 results).
+GET http://localhost:8080/dmit2015-assignment04-youngjaelee/webapi/EdmontonPropertyAssessments/query/within?longitude=-113.35023446875456&latitude=53.47287377003312&distance=50
+
+### Get the EdmontonPropertyAssessment by byHouseNumberAndStreetName.
+GET http://localhost:8080/dmit2015-assignment04-youngjaelee/webapi/EdmontonPropertyAssessments/query/byHouseNumberAndStreetName?houseNumber=523&streetName=37%20AVENUE%20NW
+
+### Return a list of the first 999 EdmontonPropertyAssessment matching the given neighbourhood (Sort the result by street name then house number).
+GET http://localhost:8080/dmit2015-assignment04-youngjaelee/webapi/EdmontonPropertyAssessments/query/byNeighbourhood?neighbourhood=RUTHERFORD
+
+### Returns list of the first 99 EdmontonPropertyAssessment matching the given neighbourhood and the assessed value is between the given minimumValue and maximumValue (Sort the result by street name then house number).
+GET http://localhost:8080/dmit2015-assignment04-youngjaelee/webapi/EdmontonPropertyAssessments/query/byNeighbourhoodAndAssessedValueRange?neighbourhood=RUTHERFORD&minimumAssessedValue=350000&maximumAssessedValue=450000
+
+### Return a list of string containing distinct Ward name sorted ascending.
+GET http://localhost:8080/dmit2015-assignment04-youngjaelee/webapi/EdmontonPropertyAssessments/query/distinctWards
+
+### Return a list of distinct JSON objects with properties neighbourhoodId and neighbourhood.
+GET http://localhost:8080/dmit2015-assignment04-youngjaelee/webapi/EdmontonPropertyAssessments/query/neighbourhoodMap
