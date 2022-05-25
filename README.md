@@ -1,4 +1,4 @@
-# BatchProcessing
+# Batch-Processing
 Jakarta EE 9 - Batch Processing
 
 This project demonstrates my ability to:
